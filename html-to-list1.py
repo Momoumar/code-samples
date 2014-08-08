@@ -5,6 +5,6 @@ url = 'http://www.oldbaileyonline.org/print.jsp?div=t17800628-33'
 
 response = urllib2.urlopen(url)
 html = response.read()
-text = obo.stripTags(html).lower()
-wordlist = obo.stripNonAlphaNum(text)
-print wordlist[0:500]
+text = obo.stripTags(html)
+wordlist = text.split()
+print wordlist[0:120]
